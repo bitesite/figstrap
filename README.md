@@ -2,28 +2,114 @@
 
 A front-end framework that helps bridge the gap between designers who use Figma and developers.
 
+## Installation
+
+At this time, FigStrap is only supported by applications that use [Sass](https://sass-lang.com/). To install, simply copy the files in the scss folder to your application.
+
 ## Features
 
 ### Auto-layout
 
-One of the key features of Figma is the ability to automatically layout elements using "auto layout". Auto-layout sets a flow direction (horizontal, vertical), sets up a gap (or margin in CSS speak between elements), and a few other properties. FigStrap has some utility classes to easily follow the Figma flow.
+The basic concept of auto-layout is that you have 1 frame, and inside that frame you have a bunch of items. You can also think of the frame as being the parent, and the items being the children.
 
-#### `.auto-layout`
+In auto-layout, you specify if the items will be laid out in on top of each other (vertical) or if they will be laid out side by side (horizontal). You also specify what the gap / margin is between each item.
 
-Coming soon.
+#### Usage
 
-#### `.auto-layout-vertical`
+To use auto-layout, the easiest way is the look at your Figma design. On the left panel, you'll see a breakdown of all the frames and elements. What you want to look for are the frames. For every frame that uses auto-layout, you'll want to create a `div` with a class of `fgs-al`. Then, within that `div`, you'll create item/children `div`s with a class of `fgs-ali`. Then you can configure the parent by adding other classes.
 
-Coming soon.
+##### Auto-Layout Frame
 
-#### `.auto-layout-horizontal`
+###### `fgs-al` (FigStrap Auto-layout)
 
-Coming soon.
+To create an auto-layout frame, add the class `fgs-al` to your `div`.
 
-#### `.auto-layout-gap-#`
+###### `fgs-al-v` (FigStrap Auto-layout Vertical)
 
-Coming soon.
+If you want the items in your frame to be laid out vertically, also add `fgs-al-v` to your `div`.
 
-#### `.auto-layout-item`
+###### `fgs-al-h` (FigStrap Auto-layout Horizontal)
 
-Coming soon.
+If you want the items in your frame to be laid out vertically, also add `fgs-al-h` to your `div`.
+
+###### `fgs-al-p-#` (FigStrap Auto-layout Padding)
+
+To specify the padding all around your items, add the class `fgs-al-p-#` where # is the number of pixels you want the padding to be. Note, this is padding around all the items as a whole - not each individual item. This library is constantly changing, but at the moment, we support 10, 20, and 60 padding. e.g `fgs-al-p-20`
+
+###### `fgs-al-g-#` (FigStrap Auto-layout Gap)
+
+To specify the gap between your items, add the class `fgs-al-g-#` where # is the number of pixels you want the gap to be. This library is constantly changing, but at the moment, we support 10, 16, 20, 30, 40, and 60 gaps. e.g `fgs-al-g-20`
+
+###### `fgs-al-h` (FigStrap Auto-layout Horizontal)
+
+If you want the items in your frame to be laid out vertically, also add `fgs-al-h` to your `div`.
+
+###### `fgs-al-justify-content-space-between` (FigStrap Auto-layout Justify Content Space Between)
+
+For Horizontal auto-layout frames, you can justify your content with space between the items.
+
+###### `fgs-al-align-center` (FigStrap Auto-layout Align Center)
+
+For Horizontal auto-layout frames, you can align your items in the center.
+
+##### Auto-layout Item
+
+###### `fgs-ali` (FigStrap Auto-layout Item)
+
+To create an auto-layout item, add `div`s under your auto-layout container and add the class `fgs-ali` to each `div`. **Note: Auto-layout items themselves can also be frames.**
+
+#### Simple Example
+
+Here is a very basic example. Let's say you want a few images all stacked on top of each other, with 10 pixels between each one.
+
+```
+<div class='fgs-al fgs-al-v fgs-al-g-10'>
+  <div class='fgs-ali'>
+    <img src='my_image.png'>
+  </div>
+  <div class='fgs-ali'>
+    <img src='my_image_2.png'>
+  </div>
+  <div class='fgs-ali'>
+    <img src='my_image_3.png'>
+  </div>
+  <div class='fgs-ali'>
+    <img src='my_image_4.png'>
+  </div>
+</div>
+```
+
+#### More complex example
+
+One of the best things about auto-layout is that you can nest frames (ie. children can themselves be parents). So you might end up with something like this:
+
+```
+<div class='fgs-al fgs-al-v fgs-al-g-40'>
+  <div class='fgs-ali fgs-al fgs-al-v fgs-al-g-10'>
+    <div class='fgs-ali'>
+      Welcome to our website!
+    <div class='fgs-ali'>
+    </div>
+      <img src='my_image.png'>
+    </div>
+  </div>
+  <div class='fgs-ali fgs-al fgs-al-h fgs-al-g-20'>
+    <div class='fgs-ali'>
+      <img src='feature_1.png'>
+    </div>
+    <div class='fgs-ali'>
+      <img src='feature_2.png'>
+    </div>
+    <div class='fgs-ali'>
+      <img src='feature_3.png'>
+    </div>
+  </div>
+  <div class='fgs-ali'>
+    <a href='/more'>Click here for more information</a>
+  </div>
+</div>
+```
+
+## Usage Rights
+
+At this point, we're keeping this open source. Feel free to use it however you want, but note that we don't take any responsibility for anything that might happen if you use it and we reserve the right to modify this at any time.

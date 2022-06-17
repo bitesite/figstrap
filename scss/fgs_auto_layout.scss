@@ -1,0 +1,124 @@
+/* FigStrap Auto Layout */
+
+.fgs-al {
+
+  /* FigStrap Auto layout padding */
+  &.fgs-al-p-10 {
+    padding: 10px;
+  }
+
+  &.fgs-al-p-20 {
+    padding: 20px;
+  }
+
+  &.fgs-al-p-60 {
+    padding: 60px;
+  }
+
+  /* FigStrap Auto Layout Vertical */
+  &.fgs-al-v {
+    &.fgs-al-g-10 {
+      > .fgs-ali {
+        margin: 10px 0;
+      }
+    }
+
+    /* FigStrap Auto layout Gap (margin) */
+    &.fgs-al-g-16 {
+      > .fgs-ali {
+        margin: 16px 0;
+      }
+    }
+    
+    &.fgs-al-g-20 {
+      > .fgs-ali {
+        margin: 20px 0;
+      }
+    }
+
+    &.fgs-al-g-30 {
+      > .fgs-ali {
+        margin: 40px 0;
+      }
+    }
+
+    &.fgs-al-g-40 {
+      > .fgs-ali {
+        margin: 40px 0;
+      }
+    }
+
+    &.fgs-al-g-60 {
+      > .fgs-ali {
+        margin: 60px 0;
+      }
+    }
+
+    .fgs-ali:first-child {
+      margin-top: 0 !important;
+    }
+
+    .fgs-ali:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  /* FigStrap Auto Layout Horizontal */
+  &.fgs-al-h {
+    display: flex;
+
+    &.fgs-al-justify-content-space-between {
+      justify-content: space-between;
+    }
+
+    &.fgs-al-align-center {
+      align-items: center;
+    }
+
+    /* FigStrap Auto layout Gap (margin) */
+    &.fgs-al-g-10 {
+      > .fgs-ali {
+        margin: 0 10px;
+      }
+    }
+
+    &.fgs-al-g-16 {
+      > .fgs-ali {
+        margin: 0px 16px;
+      }
+    }
+    
+    &.fgs-al-g-20 {
+      > .fgs-ali {
+        margin: 0 20px;
+      }
+    }
+
+    &.fgs-al-g-30 {
+      > .fgs-ali {
+        margin: 0 30px;
+      }
+    }
+
+    &.fgs-al-g-40 {
+      > .fgs-ali {
+        margin: 0 40px;
+      }
+    }
+
+    &.fgs-al-g-60 {
+      > .fgs-ali {
+        margin: 0 40px;
+      }
+    }
+
+    .fgs-ali:first-child {
+      margin-left: 0 !important;
+    }
+
+    .fgs-ali:last-child {
+      margin-right: 0 !important;
+    }
+  
+  }
+}
