@@ -17,6 +17,12 @@
 
   /* FigStrap Auto Layout Vertical */
   &.fgs-al-v {
+    &.fgs-al-g-6 {
+      > .fgs-ali {
+        margin: 6px 0;
+      }
+    }
+
     &.fgs-al-g-10 {
       > .fgs-ali {
         margin: 10px 0;
@@ -76,6 +82,12 @@
     }
 
     /* FigStrap Auto layout Gap (margin) */
+    &.fgs-al-g-6 {
+      > .fgs-ali {
+        margin: 0 6px;
+      }
+    }
+
     &.fgs-al-g-10 {
       > .fgs-ali {
         margin: 0 10px;
