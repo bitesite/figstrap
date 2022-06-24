@@ -30,7 +30,7 @@ If you want the items in your frame to be laid out vertically, also add `fgs-al-
 
 ###### `fgs-al-h` (FigStrap Auto-layout Horizontal)
 
-If you want the items in your frame to be laid out vertically, also add `fgs-al-h` to your `div`.
+If you want the items in your frame to be laid out horizontally, also add `fgs-al-h` to your `div`.
 
 ###### `fgs-al-p-#` (FigStrap Auto-layout Padding)
 
@@ -38,19 +38,28 @@ To specify the padding all around your items, add the class `fgs-al-p-#` where #
 
 ###### `fgs-al-g-#` (FigStrap Auto-layout Gap)
 
-To specify the gap between your items, add the class `fgs-al-g-#` where # is the number of pixels you want the gap to be. This library is constantly changing, but at the moment, we support 10, 16, 20, 30, 40, and 60 gaps. e.g `fgs-al-g-20`
+To specify the gap between your items, add the class `fgs-al-g-#` where # is the number of pixels you want the gap to be. This library is constantly changing, but at the moment, we support 6, 10, 16, 20, 30, 40, and 60 gaps. e.g `fgs-al-g-20`
 
-###### `fgs-al-h` (FigStrap Auto-layout Horizontal)
+###### FlexBox Helpers
 
-If you want the items in your frame to be laid out vertically, also add `fgs-al-h` to your `div`.
+FigStrap's auto-layout is based on using FlexBox and thus has all the benefits of using FlexBox. If you want to use `justify-content` or `align-items` from FlexBox, you can use the FigStrap FlexBox helper classes.
 
-###### `fgs-al-justify-content-space-between` (FigStrap Auto-layout Justify Content Space Between)
+For `justify-content`, you can use:
 
-For Horizontal auto-layout frames, you can justify your content with space between the items.
+- `fgs-al-justify-content-flex-start`
+- `fgs-al-justify-content-flex-end`
+- `fgs-al-justify-content-flex-center`
+- `fgs-al-justify-content-flex-space-between`
+- `fgs-al-justify-content-flex-space-around`
+- `fgs-al-justify-content-flex-space-evenly`
 
-###### `fgs-al-align-center` (FigStrap Auto-layout Align Center)
+And for `align-items`, you can use:
 
-For Horizontal auto-layout frames, you can align your items in the center.
+- `fgs-al-align-items-flex-start`
+- `fgs-al-align-items-flex-end`
+- `fgs-al-align-items-flex-center`
+- `fgs-al-align-items-flex-stretch`
+- `fgs-al-align-items-flex-baseline`
 
 ##### Auto-layout Item
 
@@ -85,7 +94,7 @@ One of the best things about auto-layout is that you can nest frames (ie. childr
 
 ```
 <div class='fgs-al fgs-al-v fgs-al-g-40'>
-  <div class='fgs-ali fgs-al fgs-al-v fgs-al-g-10'>
+  <div class='fgs-ali fgs-al fgs-al-v fgs-al-g-10 fgs-al-align-items-center'>
     <div class='fgs-ali'>
       Welcome to our website!
     <div class='fgs-ali'>
