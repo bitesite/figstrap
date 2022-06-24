@@ -8,6 +8,10 @@ At this time, FigStrap is only supported by applications that use [Sass](https:/
 
 (If you happen to be using Ruby on Rails, we have a [gem](https://github.com/bitesite/figstrap_rails) for that.)
 
+## VS Code Extension
+
+FigStrap can lead to a lot of repetitive typing. Install the [FigStrap VS Code Extension](https://marketplace.visualstudio.com/items?itemName=bitesite.figstrap) to auto-complete a lot of the work.
+
 ## Features
 
 ### Auto-layout
