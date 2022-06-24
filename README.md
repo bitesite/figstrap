@@ -6,6 +6,8 @@ A front-end framework that helps bridge the gap between designers who use Figma 
 
 At this time, FigStrap is only supported by applications that use [Sass](https://sass-lang.com/). To install, simply copy the files in the scss folder to your application.
 
+(If you happen to be using Ruby on Rails, we have a [gem](https://github.com/bitesite/figstrap_rails) for that.)
+
 ## Features
 
 ### Auto-layout
